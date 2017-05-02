@@ -18,7 +18,7 @@ $(document).ready(function(){
       }
 
       $.ajax({
-          url: "http://localhost:9000",
+          url: Routing.generate('home'),
           type: "post",
           data: values ,
           beforeSend: function(){
@@ -27,6 +27,8 @@ $(document).ready(function(){
           success: function (response) {
             console.debug(response);
             $("#loaderDiv").hide();
+            var url = "http://localhost:9000/success";
+            $(location).attr('href',url);
           },
           error : function(resultat, statut, erreur){
              console.debug(resultat, erreur);

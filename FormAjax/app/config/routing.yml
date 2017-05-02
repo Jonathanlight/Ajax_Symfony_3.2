@@ -2,7 +2,14 @@ ajax_forms:
     resource: "@AjaxFormsBundle/Controller/"
     type:     annotation
     prefix:   /
+    options:
+        expose: true
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+fos_js_routing:
+    resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
+    options:
+        expose: true

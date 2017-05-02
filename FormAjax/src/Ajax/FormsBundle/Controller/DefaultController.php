@@ -4,6 +4,7 @@ namespace Ajax\FormsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,7 +14,7 @@ use Ajax\FormsBundle\Entity\personne;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="home")
      */
     public function indexAction(Request $request)
     {
@@ -45,5 +46,16 @@ class DefaultController extends Controller
         return $rep->setData(['success']);
       }
         return $this->render('AjaxFormsBundle:Default:index.html.twig');
+    }
+
+
+
+    /**
+     * @Route("/success", name="success")
+     * @Template()
+     */
+    public function successAction(Request $request)
+    {
+        return [];
     }
 }
