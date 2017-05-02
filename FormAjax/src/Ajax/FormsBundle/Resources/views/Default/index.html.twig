@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style media="screen">
+      #loaderDiv p{
+        color: #fff;
+        font-size: 19px;
+      }
+      #loaderDiv{
+        width: 100%;
+        height: 5000px;
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        z-index: 10;
+        padding-top: 200px;
+        display: none;
+      }
+      #loader{
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loaderDiv">
+      <center>
+        <p>Traitement de votre prestation en cours ...</p> <br/>
+        <img src="https://d1ow200m9i3wyh.cloudfront.net/img/assets/common/images/loader.gif" id="loader" />
+      </center>
+    </div>
+
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Ajax-Test</a>
+      </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Symfony Form Ajax</h1>
+      </div>
+    </div>
+
+
+<div class="container">
+  <div class="section">
+
+
+    <div class="row">
+    <form class="col s12" method="post" id="ajax_form">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="firstname" name="firstname"  type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" name="lastname" id="lastname"  class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="password" name="password" id="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="email" name="email" id="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button type="submit" id="download-button" class="btn-large waves-effect waves-light red">Envoyer</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  </div>
+</div>
+
+    <!--Import jQuery before materialize.js-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+  </body>
+</html>
